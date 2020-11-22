@@ -44,7 +44,7 @@ class AdvertiserSignUp extends React.Component {
                     password: this.state.password,
                     advertiserName: this.state.advertiserName,
                     adCreativeDescription: this.state.adCreativeDescription,
-                    adBudget: 0
+                    adBudget: this.state.adBudget
                 }
             });
 

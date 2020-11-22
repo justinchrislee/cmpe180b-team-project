@@ -1,9 +1,28 @@
 module.exports = (app, connection) => {
-    app.post('/api/bidoffer', (req, res) => {
-        if (req.body.bidAmount > 1000) {
-            res.send({ success: "Bid has been submitted!" });
-        } else {
-            res.send({ failure: "Been amount needs to be higher" });
-        }
+    app.post('/api/bidoffer', (req, res) => {    
+        connection.query('SELECT * FROM `BidOffer` WHERE `Advertiser_ID` = ? AND `Slot_ID` = ?', [req.body.advertiserId, req.body.slotId], function(error, results, fields) {
+            if (error) {
+                res.send({ failure: "Querying for bid offer failed." });
+            } else {
+                if (results.length > 0) {
+                    res.send({ failure: "You've already submitted a bid for this slot." });
+                } else {
+                    const bidOffer = {
+                        Advertiser_ID: req.body.advertiserId,
+                        Slot_ID: req.body.slotId,
+                        BidPrice: req.body.bidAmount,
+                        Auction_ID: req.body.auctionId,
+                        Payment_Method_ID: req.body.paymentMethod
+                    }
+                    connection.query('INSERT INTO `BidOffer` SET ?', bidOffer, function(error, results, fields) {
+                        if (error) {
+                            res.send({ failure: "Insertion into BidOffer failed." });
+                        } else {
+                            res.send({ success: "You've successfully submitted your bid!" });
+                        }
+                    });
+                }
+            }
+        });
     });
 };

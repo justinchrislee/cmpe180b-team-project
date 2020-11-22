@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 
 module.exports = (app, connection) => {
-    app.post('/api/adsignup', async (req, res) => {   
+    app.post('/api/adsignup', async (req, res) => { 
         connection.query('SELECT * FROM `User` WHERE `Email` = ?', [req.body.email], function(error, emailResults, fields) {
             if (error) {
                 res.send({ failure: "Error occurred while querying for email."})

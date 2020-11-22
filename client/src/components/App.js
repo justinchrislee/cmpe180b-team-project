@@ -4,11 +4,13 @@ import { connect } from 'react-redux'; // gives ability to call action creators
 import * as actions from '../actions';
 
 import Header from './Header';
-import Landing from './Landing';
+import Home from './Home';
 import Login from './Login';
 import AdvertiserSignUp from './AdvertiserSignUp';
 import PublisherSignUp from './PublisherSignUp';
 import BidOffer from './BidOffer';
+import AddAuctionSlot from './AddAuctionSlot';
+import Auction from './Auction';
 
 class App extends React.Component {
     componentDidMount() {
@@ -18,14 +20,16 @@ class App extends React.Component {
     render() {
         return (
             <div className = "container">
-                <Header />
                 <BrowserRouter>
+                    <Header />
                     <div>
-                        <Route exact path="/" component={Landing} />
+                        <Route exact path="/" component={Home} />
                         <Route path="/login" component={Login} />
                         <Route path="/adsignup" component={AdvertiserSignUp} />
                         <Route path="/pubsignup" component={PublisherSignUp} />
                         <Route path="/bidoffer" component={BidOffer} />
+                        <Route path="/addaucslot" component={AddAuctionSlot} />
+                        <Route path="/auction" component={Auction} />
                     </div>
                 </BrowserRouter>
             </div>

@@ -45,6 +45,8 @@ require('./services/passport')(connection); // include passport services
 require('./routes/signUpRoutes')(app, connection); // sign up route
 require('./routes/authRoutes')(app); // authentication routes
 require('./routes/bidOffer')(app, connection); // bid offer route
+require('./routes/addAuctionSlot')(app, connection); // bid submission route
+require('./routes/resourcesRoutes')(app, connection); // api routes for accessing resources in database
 
 
 

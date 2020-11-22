@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Button, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { connect} from 'react-redux';
 import axios from 'axios';
 
 class BidOffer extends React.Component {
@@ -15,36 +16,76 @@ class BidOffer extends React.Component {
         
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderRows = this.renderRow.bind(this);
     }
     
     handleChange(value, property) {
         this.setState({[property]: value});
     }
     
-    async handleSubmit() {
-        let res = await axios({
-            method: 'post',
-            url: '/api/bidoffer',
-            data: {
-                bidAmount: this.state.bidAmount,
-                paymentMethod: this.state.paymentMethod
-            }
-        });
-        
-        if (res.data.success) {
+    async handleSubmit() {  
+        if (this.props.bidSlot == null) {
             this.setState({
-                resultMessage: res.data.success,
-                resultMessageColor: '#1aff1a'
-            }); 
-        } else if (res.data.failure) {
-            this.setState({
-                resultMessage: res.data.failure,
+                resultMessage: "Unspecified auction slot. Go back to home page and click place bid next to available auction slot",
                 resultMessageColor: '#ff1a1a'
+            }); 
+        } else if (this.state.bidAmount > this.props.auth.BudgetedCost) {
+            this.setState({
+                resultMessage: "Your bid amount exceeds your budget cost.",
+                resultMessageColor: '#ff1a1a'
+            }); 
+        } else if (this.state.bidAmount < this.props.bidSlot[0].Start_Bid_Price) {
+            this.setState({
+                resultMessage: "Your bid isn't high enough.",
+                resultMessageColor: '#ff1a1a'
+            }); 
+        } else {
+            let res = await axios({
+                method: 'post',
+                url: '/api/bidoffer',
+                data: {
+                    advertiserId: this.props.auth.Advertiser_ID,
+                    slotId: this.props.bidSlot[0].Slot_ID,
+                    bidAmount: this.state.bidAmount,
+                    auctionId: this.props.bidSlot[0].Auction_ID,
+                    paymentMethod: this.state.paymentMethod
+                }
             });
+
+            if (res.data.success) {
+                this.setState({
+                    resultMessage: res.data.success,
+                    resultMessageColor: '#1aff1a'
+                }); 
+            } else if (res.data.failure) {
+                this.setState({
+                    resultMessage: res.data.failure,
+                    resultMessageColor: '#ff1a1a'
+                });
+            }   
+        }
+    }
+        
+    renderRow(index) {
+        if (this.props.bidSlot != null) {        
+            return (
+              <tbody key={index}>
+                <tr>
+                  <td>{this.props.bidSlot[0].Publisher_ID}</td>
+                  <td>{this.props.bidSlot[0].Slot_ID}</td>
+                  <td>{this.props.bidSlot[0].Auction_ID}</td>
+                  <td>${this.props.bidSlot[0].Start_Bid_Price}</td>
+                </tr>
+              </tbody>
+            );
+        } else {
+            return;
         }
     }
     
     render() {
+        console.log("INSIDE BID OFFER");
+        console.log(this.props.bidSlot);
         return (
             <div>
                 <h2>Bid Offer</h2>
@@ -54,15 +95,10 @@ class BidOffer extends React.Component {
                       <th>Publisher_ID</th>
                       <th>Slot_ID</th>
                       <th>Auction_ID</th>
+                      <th>Start_Bid_Price</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>1003</td>
-                      <td>12</td>
-                      <td>101</td>
-                    </tr>
-                  </tbody>
+                  {this.renderRows()}
                 </Table>
             
              
@@ -92,4 +128,8 @@ class BidOffer extends React.Component {
     }
 }
 
-export default BidOffer;
+function mapStateToProps({ bidSlot, auth }) {
+    return { bidSlot, auth };
+}
+
+export default connect(mapStateToProps)(BidOffer);
