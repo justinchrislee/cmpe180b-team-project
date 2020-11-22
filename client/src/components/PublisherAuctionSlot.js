@@ -14,7 +14,6 @@ class PublisherAuctionSlot extends React.Component {
     getAuctionSlotDetails() {
         this.props.fetchPublisherAuctionSlotDetails(this.props.auctionSlot.Slot_ID);
         this.props.fetchBidsForAuctionSlot(this.props.auctionSlot.Slot_ID);
-        this.props.fetchAuctionWinner(this.props.auctionSlot.Slot_ID);
     }
     
     render() {
