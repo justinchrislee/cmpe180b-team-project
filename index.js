@@ -49,9 +49,4 @@ require('./routes/addAuctionSlot')(app, connection); // bid submission route
 require('./routes/resourcesRoutes')(app, connection); // api routes for accessing resources in database
 
 
-
-app.get('/random', (req, res) => {
-    res.send({ tenet: "we live in a twilight world, no friends at dusk" });
-});
-
 app.listen(5000);
