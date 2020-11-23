@@ -39,6 +39,9 @@ module.exports = (app, connection) => {
                                 } else {
                                     let date = `${req.body.endYear}-${req.body.endMonth}-${req.body.endDay}`;
                                     
+                                    // check to see if date for end of auction slot is a valid date and a date that
+                                    // is either today or in the future
+                                    
                                     if (!moment(date, "YYYY-MM-DD").isValid()) {
                                         return connection.rollback(function() {
                                             res.send({ failure: "Not a proper date." });
