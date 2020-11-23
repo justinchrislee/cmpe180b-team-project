@@ -29,6 +29,8 @@ module.exports = (app, connection) => {
                                 Auction_Winner: null
                             };
                             
+                            // add auction slot with auction_id as null because we still need to add auction
+                            
                             connection.query('INSERT INTO `AuctionSlot` SET ?', auctionSlot, function(error, insertAuctionSlotResult, fields) {
                                 if (error) {
                                     return connection.rollback(function() {
@@ -55,12 +57,17 @@ module.exports = (app, connection) => {
                                                 End_Date: date
                                             };
                                             
+                                            // add auction
+                                            
                                             connection.query('INSERT INTO `Auction` SET ?', auction, function(error, insertAuctionResults, fields) {
                                                 if (error) {
                                                     return connection.rollback(function() {
                                                         res.send({ failure: "Insert auction failed." });
                                                     });
                                                 } else {
+                                                    
+                                                    // update auction_id for the auction slot added above to the 
+                                                    // auction_id of the auction just added
                                                     connection.query('UPDATE `AuctionSlot` SET `Auction_ID` = ? WHERE `Slot_ID` = ?', [auctionCount[0].count + 101, auctionSlotCount[0].count + 10], function(error, updateResults, fields) {
                                                         if (error) {
                                                             return connection.rollback(function() {
