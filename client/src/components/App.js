@@ -8,6 +8,7 @@ import Home from './Home';
 import Login from './Login';
 import AdvertiserSignUp from './AdvertiserSignUp';
 import PublisherSignUp from './PublisherSignUp';
+import AdministratorSignUp from './AdministratorSignUp';
 import BidOffer from './BidOffer';
 import AddAuctionSlot from './AddAuctionSlot';
 import Auction from './Auction';
@@ -27,6 +28,7 @@ class App extends React.Component {
                         <Route path="/login" component={Login} />
                         <Route path="/adsignup" component={AdvertiserSignUp} />
                         <Route path="/pubsignup" component={PublisherSignUp} />
+                        <Route path="/adminsignup" component={AdministratorSignUp} />
                         <Route path="/bidoffer" component={BidOffer} />
                         <Route path="/addaucslot" component={AddAuctionSlot} />
                         <Route path="/auction" component={Auction} />

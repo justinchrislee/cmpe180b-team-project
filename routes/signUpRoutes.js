@@ -130,8 +130,82 @@ module.exports = (app, connection) => {
             }
         }) // MAIN QUERY  
     });
+    
+    app.post('/api/adminsignup', (req, res) => {
+        connection.query('SELECT * FROM `User` WHERE `Email` = ?', req.body.email, function(error, userEmailResult, fields) {
+            if (error) {
+                res.send({ failure: "Error occurred while querying for email." });
+            } else {
+                if (userEmailResult.length > 0) {
+                    connection.rollback(function() {
+                        res.send({ failure: "A user has already registered with this email" });
+                    });
+                } else {
+                    connection.query('SELECT * FROM `Administrator` WHERE `Email` = ?', req.body.email, function(error, adminEmailResult, fields) {
+                        if (adminEmailResult.length > 0) {
+                            connection.rollback(function() {
+                                res.send({ failure: "An administrator has already registered with this email" });
+                            });
+                        } else {
+                                connection.query('SELECT COUNT(*) AS count FROM Administrator', function(error, adminRows, fields) {
+                                if (error) {
+                                    connection.rollback(function() {
+                                        res.send({ failure: "Error retrieving count of administrator rows" });
+                                    });
+                                } else {
+                                    bcrypt.genSalt(10, function(err, salt) {
+                                        bcrypt.hash(req.body.password, salt, function(err, hash) {
+                                            if (err) {
+                                                connection.rollback(function() {
+                                                    res.send({ failure: "Error attempting to hash password" });
+                                                });
+                                            } else {
+                                                const administrator = {
+                                                    Admin_ID: adminRows[0].count + 1,
+                                                    First_Name: req.body.firstName,
+                                                    Last_Name: req.body.lastName,
+                                                    Email: req.body.email,
+                                                    Admin_Password: req.body.password
+                                                }
+
+                                                connection.query('INSERT INTO `Administrator` SET ?', administrator, function(error, insertAdministratorResults, fields) {
+                                                    if (error) {
+                                                        console.log()
+                                                        connection.rollback(function() {
+                                                            res.send({ failure: "Insert into administrator failed." });
+                                                        });
+                                                    } else {
+                                                        connection.commit(function() {
+                                                            res.send({ success: "Your request to become an administrator has been sent. It is now waiting for approval." });
+                                                        });
+                                                    }
+                                                });
+                                            }
+                                        });   
+                                    });
+                                }
+                            });        
+                        }
+                    });
+                }
+            }
+        });
+    });
 }
 
+
+
+/*
+
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    */
 
 
 

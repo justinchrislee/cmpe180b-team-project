@@ -36,7 +36,6 @@ class Auction extends React.Component {
                   <td>{bid.Advertiser_ID}</td>
                   <td>{bid.Slot_ID}</td>
                   <td>${bid.BidPrice}</td>
-                  <td>{bid.Auction_ID}</td>
                   <td>{bid.Payment_Method_ID}</td>
                 </tr>
               </tbody>
@@ -68,7 +67,6 @@ class Auction extends React.Component {
                       <th>Advertiser_ID</th>
                       <th>Slot_ID</th>
                       <th>BidPrice</th>
-                      <th>Auction_ID</th>
                       <th>Payment_Method_ID</th>
                     </tr>
                   </thead>
@@ -80,7 +78,7 @@ class Auction extends React.Component {
                 </Table>
                        
                 <div style={{ marginTop: '5%' }}>
-                  <h4>Auction Winner: N/A</h4>
+                  <h4>Auction Winner ID: {this.props.publisherAuctionSlotDetails && this.props.publisherAuctionSlotDetails[0].Auction_Winner ? this.props.publisherAuctionSlotDetails[0].Auction_Winner :  "N/A"}</h4>
                 </div>  
             </div>
         );

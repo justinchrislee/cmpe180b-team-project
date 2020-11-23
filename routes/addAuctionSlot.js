@@ -19,14 +19,14 @@ module.exports = (app, connection) => {
                                 res.send({ failure: "Transaction failed." });
                             });
                         } else {
-                            console.log("this is the auction count: " + auctionCount[0].count);
                             const auctionSlot = {
                                 Slot_ID: auctionSlotCount[0].count + 10,
                                 Slot_Status: 'On going',
                                 Publisher_ID: req.body.publisherId,
                                 Auction_ID: null,
                                 Start_Bid_Price: req.body.startBidPrice,
-                                Category_ID: req.body.category
+                                Category_ID: req.body.category,
+                                Auction_Winner: null
                             };
                             
                             connection.query('INSERT INTO `AuctionSlot` SET ?', auctionSlot, function(error, insertAuctionSlotResult, fields) {
@@ -43,6 +43,7 @@ module.exports = (app, connection) => {
                                         });
                                     } else {
                                         let now = moment().startOf('day').format("YYYY-MM-DD");
+                                        
                                         if (!moment(date).isSameOrAfter(now, 'day')) {
                                             return connection.rollback(function() {
                                                 res.send({ failure: "Date is in the past." });

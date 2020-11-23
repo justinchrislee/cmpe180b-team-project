@@ -3,7 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-class PublisherSignUp extends React.Component {
+class AdministratorSignUp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,6 @@ class PublisherSignUp extends React.Component {
             email: '',
             password: '',
             confirmPassword: '',
-            publisherName: '',
             resultMessage: '',
             resultMessageColor: ''
         }
@@ -34,13 +33,12 @@ class PublisherSignUp extends React.Component {
         } else {
             let res = await axios({
                 method: 'post',
-                url: '/api/pubsignup',
+                url: '/api/adminsignup',
                 data: {
                     firstName: this.state.firstName,
                     lastName: this.state.lastName,
                     email: this.state.email,
-                    password: this.state.password,
-                    publisherName: this.state.publisherName
+                    password: this.state.password
                 }
             });
 
@@ -61,7 +59,7 @@ class PublisherSignUp extends React.Component {
     render() {
         return (
             <div>
-                <h2>Publisher Sign Up!</h2>
+                <h2>Apply to be an Administrator!</h2>
                   <Form.Group controlId="formBasicFirstName">
                     <Form.Label>First Name</Form.Label>
                     <Form.Control name="firstName" type="firstName" placeholder="Enter first name" value={this.state.firstName} 
@@ -91,12 +89,6 @@ class PublisherSignUp extends React.Component {
                     <Form.Control name="confirmPassword" type="password" placeholder="Re-type password" value={this.state.confirmPassword}
                        onChange={(e) => this.handleChange(e.target.value, 'confirmPassword')} />
                   </Form.Group>
-                  
-                  <Form.Group controlId="formBasicPublisherName">
-                    <Form.Label>Publisher Name</Form.Label>
-                    <Form.Control name="publisherName" type="text" placeholder="Enter publisher name" value={this.state.publisherName}
-                       onChange={(e) => this.handleChange(e.target.value, 'publisherName')} />
-                  </Form.Group>
 
                   <Button variant="primary" type="submit" onClick={this.handleSubmit}>
                     Submit
@@ -108,5 +100,4 @@ class PublisherSignUp extends React.Component {
     }
 }
 
-export default PublisherSignUp;
-
+export default AdministratorSignUp;

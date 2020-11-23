@@ -15,17 +15,22 @@ module.exports = (connection) => {
             if (error) {
                 return done(error);
             } else {
-                if (advertisorResults.length == 0) {
+                if (advertisorResults.length === 0) {
                     // user not in advertisor, check publisher
-                    connection.query('SELECT * FROM `User` INNER JOIN `Publisher` ON `User_ID`=`Publisher_ID` WHERE `Email` = ?', [email], function(error, publisherResults, fields) {
-                        
-                        if (publisherResults.length == 0) {
-                            // not in publisher, no user found
-                            return done(null, false);
+                    connection.query('SELECT * FROM `User` INNER JOIN `Publisher` ON `User_ID`=`Publisher_ID` WHERE `Email` = ?', [email], function(error, publisherResults, fields) {               
+                        if (publisherResults.length === 0) {
+                            // not in publisher, check administrator
+                            connection.query('SELECT * FROM `Administrator` WHERE `Email` = ?', [email], function(error, administratorResults, fields) {
+                                if (administratorResults.length === 0) {
+                                    return done(null, false);
+                                } else {
+                                    return done(null, administratorResults[0]);
+                                }
+                            });
+                        } else {
+                            // user in publisher
+                            return done(null, publisherResults[0]);   
                         }
-                        
-                        // user in publisher
-                        return done(null, publisherResults[0]);
                     });
                 } else {
                    // user in advertisor
@@ -51,8 +56,15 @@ module.exports = (connection) => {
                     // user not in advertisor, check publisher
                     connection.query('SELECT * FROM `User` INNER JOIN `Publisher` ON `User_ID`=`Publisher_ID` WHERE `Email` = ?', [email], function(error, publisherResults, fields) {
                        if (publisherResults.length == 0) {
-                           // not in publisher
-                           return done(null, false);
+                           // not in publisher, check administrator
+                           connection.query('SELECT * FROM `Administrator` WHERE `Email` = ?', [email], function(error, administratorResults, fields) {
+                               if (administratorResults.length == 0) {
+                                   // not in administrator, user doesn't exist
+                                   return done(null, false);
+                               } else {
+                                   return done(null, administratorResults[0]);
+                               }
+                           });
                        } else {
                             // compare password with hashed password
                             bcrypt.compare(password, publisherResults[0].User_Password, function(err, res) {

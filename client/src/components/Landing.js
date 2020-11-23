@@ -19,6 +19,9 @@ class Landing extends React.Component {
                     <Link to="/pubsignup">
                         <Button style={{ marginLeft: '1%' }}variant="primary">Sign up as a publisher!</Button>
                     </Link>
+                    <Link to="/adminsignup">
+                        <Button style={{ marginLeft: '1%' }}variant="primary">Apply to be an administrator!</Button>
+                    </Link>
                   </Card.Body>
                   <Card.Footer className="text-muted"></Card.Footer>
                 </Card>
