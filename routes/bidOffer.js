@@ -19,6 +19,8 @@ module.exports = (app, connection) => {
                                 BidPrice: req.body.bidAmount,
                                 Payment_Method_ID: req.body.paymentMethod
                             }
+                            
+                            // insert new bid offer into bid offer table
 
                             connection.query('INSERT INTO `BidOffer` SET ?', bidOffer, function(error, results, fields) {
                                 if (error) {

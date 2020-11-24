@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 
 module.exports = (app, connection) => {
+    // advertiser sign up
     app.post('/api/adsignup', async (req, res) => { 
         connection.query('SELECT * FROM `User` WHERE `Email` = ?', [req.body.email], function(error, emailResults, fields) {
             if (error) {
@@ -32,6 +33,8 @@ module.exports = (app, connection) => {
                                               } else {
                                                   const user = { User_ID: userRows[0].count + 1000, First_Name: req.body.firstName, Last_Name: req.body.lastName, Email: req.body.email, User_Password: hash }
 
+                                                  // insert new user into user table
+                                                  
                                                   connection.query('INSERT INTO `User` SET ?', user, function(error, results, fields) {
                                                       if (error) {
                                                           connection.rollback(function() {
@@ -40,6 +43,8 @@ module.exports = (app, connection) => {
                                                       } else {
                                                           const advertiser = { Advertiser_ID: userRows[0].count + 1000, Advertiser_Name: req.body.advertiserName, Ad_Description: req.body.adCreativeDescription, BudgetedCost: req.body.adBudget };
 
+                                                          // insert new advertiser into advertiser table
+                                                          
                                                           connection.query('INSERT INTO `Advertiser` SET ?', advertiser, function(error, results, fields) {
                                                               if (error) {
                                                                   connection.rollback(function() {
@@ -67,6 +72,7 @@ module.exports = (app, connection) => {
         }) // MAIN QUERY  
     });
     
+    // publisher sign up
     app.post('/api/pubsignup', (req, res) => {
         connection.query('SELECT * FROM `User` WHERE `Email` = ?', [req.body.email], function(error, emailResults, fields) {
             if (error) {
@@ -98,6 +104,8 @@ module.exports = (app, connection) => {
                                              } else {
                                                   const user = { User_ID: userRows[0].count + 1000, First_Name: req.body.firstName, Last_Name: req.body.lastName, Email: req.body.email, User_Password: hash }
 
+                                                  // insert new user into user table
+                                                  
                                                   connection.query('INSERT INTO `User` SET ?', user, function(error, results, fields) {
                                                       if (error) {
                                                           connection.rollback(function() {
@@ -106,6 +114,8 @@ module.exports = (app, connection) => {
                                                       } else {
                                                           const publisher = { Publisher_ID: userRows[0].count + 1000, Publisher_Name: req.body.publisherName };
 
+                                                          // insert new publisher into publisher table
+                                                          
                                                           connection.query('INSERT INTO `Publisher` SET ?', publisher, function(error, results, fields) {
                                                               if (error) {
                                                                   connection.rollback(function() {
@@ -131,6 +141,7 @@ module.exports = (app, connection) => {
         }) // MAIN QUERY  
     });
     
+    // administrator sign up
     app.post('/api/adminsignup', (req, res) => {
         connection.query('SELECT * FROM `User` WHERE `Email` = ?', req.body.email, function(error, userEmailResult, fields) {
             if (error) {
@@ -165,9 +176,11 @@ module.exports = (app, connection) => {
                                                     First_Name: req.body.firstName,
                                                     Last_Name: req.body.lastName,
                                                     Email: req.body.email,
-                                                    Admin_Password: req.body.password
+                                                    Admin_Password: hash
                                                 }
 
+                                                // insert new administrator into administrator table
+                                                
                                                 connection.query('INSERT INTO `Administrator` SET ?', administrator, function(error, insertAdministratorResults, fields) {
                                                     if (error) {
                                                         console.log()

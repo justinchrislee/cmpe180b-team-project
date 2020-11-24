@@ -62,11 +62,19 @@ module.exports = (connection) => {
                                    // not in administrator, user doesn't exist
                                    return done(null, false);
                                } else {
-                                   return done(null, administratorResults[0]);
+                                   // compare password with hashed administrator password
+                                   bcrypt.compare(password, administratorResults[0].Admin_Password, function(err, res) {
+                                        if (res) {
+                                            return done(null, administratorResults[0]);
+                                        }
+                                       
+                                        console.log("Incorrect password");
+                                        return done(null, false);
+                                   });
                                }
                            });
                        } else {
-                            // compare password with hashed password
+                            // compare password with hashed publisher password
                             bcrypt.compare(password, publisherResults[0].User_Password, function(err, res) {
                                 if (res) {
                                     return done(null, publisherResults[0]); // password match, send user information to serializeUser above
@@ -78,7 +86,7 @@ module.exports = (connection) => {
                        }
                     });
                 } else {
-                    // compare password with hashed password
+                    // compare password with hashed administrator password
                     bcrypt.compare(password, advertisorResults[0].User_Password, function(err, res) {
                         if (res) {
                             return done(null, advertisorResults[0]); // password, match send user information to serializeUser above
