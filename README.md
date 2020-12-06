@@ -266,3 +266,12 @@ N/A - End of Project
 None
 </li><br>
 </ul>
+
+
+<h3>XP Core Value Demonstrated Throughout the Project</h3><br>
+
+<ul>
+<li> 
+I believe this team demonstrated the XP core value of courage throughout the entire project. The reason why I chose courage is because this team as a whole faced countless challenges and setbacks, yet as a unit, chose to persevere through times where the tasks at hand seemed extremely daunting. For instance, the backend team had originally chosen Java to implement the backend. However, a transition had to be made from Java to Python, which in essence, meant that they had to reimplement everything that they had in Python. In addition to that, they had to implement several more APIs on the fly, in which various APIs posed complex challenges. On the other hand, the front end team also had its fair share of times where the project felt somewhat overwhelming. In particular, the hardest challenge that the frontend team faced was having to implement countless APIs in the last week. In prior weeks, due to several challenges that the backend team encountered, most of the APIs weren’t available quite yet. Therefore, it almost felt as if the walls were slowly caving in. However, none of us chose to back down from what seemed like an impossible task and worked through it. There were also other times where maybe a team member temporarily couldn’t be as involved in the group project for personal reasons, and the rest of the team would do an admirable job of stepping up. In general, this team exhibited great courage throughout the entire project. I also personally believe it may have been the most important factor in our success. 
+</li><br>
+</ul>
