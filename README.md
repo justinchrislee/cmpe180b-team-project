@@ -268,7 +268,7 @@ None
 </ul>
 
 
-<h3>XP Core Value Demonstrated Throughout the Project</h3><br>
+<h2>XP Core Value Demonstrated Throughout the Project</h2><br>
 
 <ul>
 <li> 
