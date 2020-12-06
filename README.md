@@ -1,4 +1,4 @@
-#Justin Lee - Weekly Scrum</h1><br>
+# Justin Lee - Weekly Scrum<br>
 <h2>Sprint #1 (9/30 - 10/06)</h2><br>
 
 <h3>What tasks did I work on/complete?</h3><br>
