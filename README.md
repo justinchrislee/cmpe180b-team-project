@@ -13,17 +13,19 @@ From the first meeting, it was agreed that we would separate into two groups, th
 </li><br>
 </ul>
 
-<h3>What I plan to do today</h3><br>
- <ul>
- <li>High level overview of the project</li><br>
-  <li>Functional Requirements</li><br>
-   <li>AWS deployment</li><br>
+<h3>What am I planning to work on next?</h3><br>
+<ul>
+<li> 
+My next task was to put some thought into a needed functionality of the database, which would be searching for listings. Another task of mine was to begin researching how to deploy the frontend on AWS EC2 Cluster. 
+</li><br>
 </ul>
 
 
-<h3>Blockers I have</h3><br>
- <ul>
- <li>----<i>None : first scrum</i>----</li><br>
+<h3>What tasks are blocked waiting on another team member?</h3><br>
+<ul>
+<li> 
+None
+</li><br>
 </ul>
 
 <h3>XP Value</h3><br>
