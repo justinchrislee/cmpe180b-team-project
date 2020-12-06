@@ -1,14 +1,16 @@
-<h1>Arselan - Weekly Scrum</h1><br>
+<h1>Justin Lee - Weekly Scrum</h1><br>
 <h2>Team 14, Sprint #1 (9/30 - 10/06)</h2><br>
 
- <h3>Name</h3><br>
- <ul>
- <li>Arselan Alvi </li><br>
+<h3>Name</h3><br>
+<ul>
+<li>Justin Lee</li><br>
 </ul>
- 
- <h3>What did I do since last scrum: <i> first scrum </i> </h3><br>
- <ul>
- <li>Read the Project description</li><br>
+
+<h3>What tasks did I work on/complete?</h3><br>
+<ul>
+<li> 
+From the first meeting, it was agreed that we would separate into two groups, that being the frontend team and backend team. Anna and I would be the frontend team, while Arselan and Poojitha were the backend team. From there, my responsibility was to think about potential tech stacks that I could suggest to the team. For the frontend team, I had suggested React, which Anna and I agreed to use. For the backend, my suggestion was to use Node because I have some experience with that particular technology. However, Arselan and Poojitha decided to use java as they both have experience with java. 
+</li><br>
 </ul>
 
 <h3>What I plan to do today</h3><br>
