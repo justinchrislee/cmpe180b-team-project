@@ -23,11 +23,6 @@ None
 </li><br>
 </ul>
 
-<h3>XP Value</h3><br>
- <ul>
- <li>Communication : It was important for the team to share right skill set during distribution of tasks</li><br>
-</ul>
-
 
 <h2>Sprint #2 (10/7 - 10/13)</h2><br>
  
