@@ -232,6 +232,22 @@ Sessions were not working, therefore, the frontend team couldn’t link any fron
 Completed integrating these APIs to the frontend:<br>
 <ul>
  <li>Display all listings on home page</li>
+ <li>Display applications list for landlord</li>
+ <li>Display applications list for seller</li>
+ <li>View application for landlord listing</li>
+ <li>View application for seller listing</li>
+ <li>Approve/reject application for landlord listing</li>
+ <li>Approve/reject application for seller listing</li>
+ <li>Create new sale listing</li>
+ <li>Create new rental listing</li>
+ <li>Edit sale listing</li>
+ <li>Edit rental listing</li>
+ <li>Delete sale listing</li>
+ <li>Delete rental listing</li>
+ <li>Filter search that can filter listings based on various categories</li>
+ <li>Favorite sales listings and display all favorite sales listings</li>
+ <li>Favorite rental listings and display all favorite rental listings</li>
+ <li>Remove favorite listings</li>
 </ul>
 </li><br>
 </ul>
