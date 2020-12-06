@@ -1,43 +1,40 @@
-# Justin Lee - Weekly Scrum<br>
-## Sprint #1 (9/30 - 10/06)<br>
+# Justin Lee - Weekly Scrum\
+## Sprint #1 (9/30 - 10/06)\
 
-### What tasks did I work on/complete?<br>
+### What tasks did I work on/complete?\
 
 From the first meeting, it was agreed that we would separate into two groups, that being the frontend team and backend team. Anna and I would be the frontend team, while Arselan and Poojitha were the backend team. From there, my responsibility was to think about potential tech stacks that I could suggest to the team. For the frontend team, I had suggested React, which Anna and I agreed to use. For the backend, my suggestion was to use Node because I have some experience with that particular technology. However, Arselan and Poojitha decided to use java as they both have experience with java. 
 
 
-### What am I planning to work on next?<br>
+### What am I planning to work on next?\
 My next task was to put some thought into a needed functionality of the database, which would be searching for listings. Another task of mine was to begin researching how to deploy the frontend on AWS EC2 Cluster. 
 
 
-### What tasks are blocked waiting on another team member?<br>
+### What tasks are blocked waiting on another team member?\
 None
 
 
 
-## Sprint #2 (10/7 - 10/13)<br>
+## Sprint #2 (10/7 - 10/13)\
  
-### What tasks did I work on/complete?<br>
+### What tasks did I work on/complete?\
 Created a small entity relation diagram that shows the entities, relationships, and attributes for the search functionality of the database. 
 
 
-### What am I planning to work on next?<br>
+### What am I planning to work on next?\
 Begin collaborating with Anna on creating home page and begin integrating API for the home page.
 
 
 
-### What tasks are blocked waiting on another team member?<br> 
+### What tasks are blocked waiting on another team member?\ 
 None
 
 
-## Sprint #3 (10/14 - 10/20)<br>
+## Sprint #3 (10/14 - 10/20)\
 
-### What tasks did I work on/complete?<br>
-<ul>
-<li> 
+### What tasks did I work on/complete?\
 Anna and I began working on the home page. 
-</li><br>
-</ul>
+
 
 <h3>What am I planning to work on next?</h3><br>
 <ul>
