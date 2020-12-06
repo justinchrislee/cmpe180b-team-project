@@ -11,8 +11,10 @@ My next task was to put some thought into a needed functionality of the database
 
 
 ### What tasks are blocked waiting on another team member?
-None\
+None
 
+<br />
+<br />
 
 ## Sprint #2 (10/7 - 10/13)
  
@@ -28,6 +30,8 @@ Begin collaborating with Anna on creating home page and begin integrating API fo
 ### What tasks are blocked waiting on another team member?
 None
 
+<br />
+<br />
 
 ## Sprint #3 (10/14 - 10/20)
 
@@ -43,7 +47,8 @@ The next task was to determine what kind of functionality we wanted for our appl
 ### What tasks are blocked waiting on another team member?
 Backend team was not able to get the APIs, therefore, Anna and I couldn’t link the frontend to the backend. 
 
-
+<br />
+<br />
 
 ## Sprint #4 (10/21 - 10/26)
 
@@ -59,7 +64,8 @@ Start integrating logic for the home page regarding rendering the listings.
 ### What tasks are blocked waiting on another team member?
 Backend team was not able to get the APIs, therefore, Anna and I couldn’t link the frontend to the backend. 
 
-
+<br />
+<br />
 
 ## Sprint #5 (10/28 - 11/02)
 
@@ -75,7 +81,8 @@ Developed some of the logic for rendering listings on the home page, using fake 
 ### What tasks are blocked waiting on another team member?
 APIs were returning either HTML or text, not JSON, which was the agreed upon format for the API. Therefore, Anna and I were not able to link the frontend to the backend. 
 
-
+<br />
+<br />
 
 ## Sprint #6 (11/04 - 11/10)
  
@@ -91,7 +98,8 @@ I am planning to work on developing some more logic for the home page with data 
 ### What tasks are blocked waiting on another team member?
 Aside from Login, which Anna integrated, no other APIs were functional at the time, so I was not able to link other frontend components to the backend. 
 
-
+<br />
+<br />
 
 ## Sprint #7 (11/11 - 11/17)
 ### What tasks did I work on/complete?
@@ -106,7 +114,8 @@ Display listings on the home page with actual data, implement logic for showing 
 ### What tasks are blocked waiting on another team member?
 Still don’t have any other APIs from the backend team, therefore, couldn’t display actual listings from the database.
 
-
+<br />
+<br />
 
 ## Sprint #8 (11/18 - 11/24)
 
@@ -121,7 +130,8 @@ Integrate the template that Anna found for the home page, as well as develop log
 ### What tasks are blocked waiting on another team member?
 Backend team decided to switch from Java to Python Flask. Therefore, they have begun the process of redoing the APIs. Therefore, currently can’t link any frontend components to the backend. 
 
-
+<br />
+<br />
 
 ## Sprint #9 (11/25 - 12/1)
 ### What tasks did I work on/complete?
@@ -134,7 +144,8 @@ Begin linking frontend to backend, develop logic for how to display the sidebar 
 ### What tasks are blocked waiting on another team member?
 Sessions were not working, therefore, the frontend team couldn’t link any frontend components that required sign in.
 
-
+<br />
+<br />
 
 
 ## Sprint #10 (12/2 - 12/5)
@@ -166,7 +177,8 @@ N/A - End of Project
 ### What tasks are blocked waiting on another team member?
 None
 
-
+<br />
+<br />
 
 ## XP Core Value Demonstrated Throughout the Project
 I believe this team demonstrated the XP core value of courage throughout the entire project. The reason why I chose courage is because this team as a whole faced countless challenges and setbacks, yet as a unit, chose to persevere through times where the tasks at hand seemed extremely daunting. For instance, the backend team had originally chosen Java to implement the backend. However, a transition had to be made from Java to Python, which in essence, meant that they had to reimplement everything that they had in Python. In addition to that, they had to implement several more APIs on the fly, in which various APIs posed complex challenges. On the other hand, the front end team also had its fair share of times where the project felt somewhat overwhelming. In particular, the hardest challenge that the frontend team faced was having to implement countless APIs in the last week. In prior weeks, due to several challenges that the backend team encountered, most of the APIs weren’t available quite yet. Therefore, it almost felt as if the walls were slowly caving in. However, none of us chose to back down from what seemed like an impossible task and worked through it. There were also other times where maybe a team member temporarily couldn’t be as involved in the group project for personal reasons, and the rest of the team would do an admirable job of stepping up. In general, this team exhibited great courage throughout the entire project. I also personally believe it may have been the most important factor in our success. 
