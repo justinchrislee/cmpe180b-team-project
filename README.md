@@ -1,10 +1,5 @@
 <h1>Justin Lee - Weekly Scrum</h1><br>
-<h2>Team 14, Sprint #1 (9/30 - 10/06)</h2><br>
-
-<h3>Name</h3><br>
-<ul>
-<li>Justin Lee</li><br>
-</ul>
+<h2>Sprint #1 (9/30 - 10/06)</h2><br>
 
 <h3>What tasks did I work on/complete?</h3><br>
 <ul>
@@ -34,70 +29,52 @@ None
 </ul>
 
 
-<h2>Team 14, Sprint #2 (10/7 - 10/13)</h2><br>
-
- <h3>Name</h3><br>
- <ul>
- <li>Arselan Alvi </li><br>
-</ul>
+<h2>Sprint #2 (10/7 - 10/13)</h2><br>
  
- <h3>What did I do since last scrum</h3><br>
- <ul>
- <li>Create Java Web application, get environment set up</li><br>
- <li>Create Tom cat server, run sample web application on Tomcat</li><br>
- <li>Look into Tomcat and aws compatibility, came up with aws Elastic</li><br>
+<h3>What tasks did I work on/complete?</h3><br>
+<ul>
+<li> 
+Created a small entity relation diagram that shows the entities, relationships, and attributes for the search functionality of the database. 
+</li><br>
 </ul>
 
-<h3>What I plan to do today</h3><br>
- <ul>
- <li>Testing</li><br>
-  <li>Registor API</li><br>
-   <li>Look into setting up MySQLdatabases</li><br>
-</ul>
-
-
-<h3>Blockers I have</h3><br>
- <ul>
- <li>----<i>None</i>----</li><br>
-</ul>
-
-<h3>XP Value</h3><br>
- <ul>
- <li>Simplicity : Distrubuted tasks evenly, smooth start on the java backend</li><br>
+<h3>What am I planning to work on next?</h3><br>
+<ul>
+<li> 
+Begin collaborating with Anna on creating home page and begin integrating API for the home page.
+</li><br>
 </ul>
 
 
-<h2>Team 14, Sprint #3 (10/14 - 10/20)</h2><br>
-
- <h3>Name</h3><br>
- <ul>
- <li>Arselan Alvi </li><br>
-</ul>
- 
- <h3>What did I do since last scrum</h3><br>
- <ul>
- <li>Set up MySQL database connectivity with java, JDBC.</li><br>
-  <li>Table for registered users. Test JDBC on Tomcat Server.</li><br>
- <li>Start with login</li><br>
- <li>Java web application on tomcat server deployed on AWS elastic, so that front end team can access the APIs.</li><br>
+<h3>What tasks are blocked waiting on another team member?</h3><br>
+<ul>
+<li> 
+None
+</li><br>
 </ul>
 
-<h3>What I plan to do today</h3><br>
- <ul>
- <li>Login/ Logout API</li><br>
-  <li>Look into deploying database on aws instance so the team shares one MySQL database</li><br>
-   <li>Look into setting up MySQLdatabases on aws instance</li><br>
+<h2>Sprint #3 (10/14 - 10/20)</h2><br>
+
+<h3>What tasks did I work on/complete?</h3><br>
+<ul>
+<li> 
+Anna and I began working on the home page. 
+</li><br>
+</ul>
+
+<h3>What am I planning to work on next?</h3><br>
+<ul>
+<li> 
+The next task was to determine what kind of functionality we wanted for our application in order to have a minimal viable product. 
+</li><br>
 </ul>
 
 
-<h3>Blockers I have</h3><br>
- <ul>
- <li>----<i>None</i>----</li><br>
-</ul>
-
-<h3>XP Value</h3><br>
- <ul>
- <li>Simplicity: starting with basic functionality first, getting environment set up for all</li><br>
+<h3>What tasks are blocked waiting on another team member?</h3><br>
+<ul>
+<li> 
+Backend team was not able to get the APIs, therefore, Anna and I couldn’t link the frontend to the backend. 
+</li><br>
 </ul>
 
 
