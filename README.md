@@ -11,10 +11,8 @@ My next task was to put some thought into a needed functionality of the database
 
 
 ### What tasks are blocked waiting on another team member?
-None
+None\
 
-\
-\
 
 ## Sprint #2 (10/7 - 10/13)
  
