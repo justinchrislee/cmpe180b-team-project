@@ -15,33 +15,24 @@ None
 
 
 
-<h2>Sprint #2 (10/7 - 10/13)</h2><br>
+## Sprint #2 (10/7 - 10/13)<br>
  
-<h3>What tasks did I work on/complete?</h3><br>
-<ul>
-<li> 
+### What tasks did I work on/complete?<br>
 Created a small entity relation diagram that shows the entities, relationships, and attributes for the search functionality of the database. 
-</li><br>
-</ul>
 
-<h3>What am I planning to work on next?</h3><br>
-<ul>
-<li> 
+
+### What am I planning to work on next?<br>
 Begin collaborating with Anna on creating home page and begin integrating API for the home page.
-</li><br>
-</ul>
 
 
-<h3>What tasks are blocked waiting on another team member?</h3><br>
-<ul>
-<li> 
+
+### What tasks are blocked waiting on another team member?<br> 
 None
-</li><br>
-</ul>
 
-<h2>Sprint #3 (10/14 - 10/20)</h2><br>
 
-<h3>What tasks did I work on/complete?</h3><br>
+## Sprint #3 (10/14 - 10/20)<br>
+
+### What tasks did I work on/complete?<br>
 <ul>
 <li> 
 Anna and I began working on the home page. 
