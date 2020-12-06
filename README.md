@@ -78,79 +78,53 @@ Backend team was not able to get the APIs, therefore, Anna and I couldn’t link
 </ul>
 
 
-<h2>Team 14, Sprint #4 (10/21 - 10/26)</h2><br>
+<h2>Sprint #4 (10/21 - 10/26)</h2><br>
 
- <h3>Name</h3><br>
- <ul>
- <li>Arselan Alvi </li><br>
-</ul>
- 
- <h3>What did I do since last scrum</h3><br>
- <ul>
- <li>Login / Logout APIs ready.</li><br>
-  <li>High level design of types of users / roles using the application.</li><br>
- <li>MySQL database hosted on aws RDS instance</li><br>
- <li>Database and API calls tested with the frontend team.</li><br>
+<h3>What tasks did I work on/complete?</h3><br>
+<ul>
+<li> 
+Wrote some requirements for a minimal viable product with Anna. 
+</li><br>
 </ul>
 
-<h3>What I plan to do today</h3><br>
- <ul>
- <li>Start with implemting admin</li><br>
-  <li>Test user and admin sessions</li><br>
-   <li>admin log in </li><br>
-   <li>admin approve user</li><br>
-   <li>Update databases</li><br>
-   <li>Figure out how to send JSON data to frontend them through CURL APIs</li><br>
+<h3>What am I planning to work on next?</h3><br>
+<ul>
+<li> 
+Start integrating logic for the home page regarding rendering the listings. 
+</li><br>
 </ul>
 
 
-<h3>Blockers I have</h3><br>
- <ul>
- <li>----<i>None</i>----</li><br>
+<h3>What tasks are blocked waiting on another team member?</h3><br>
+<ul>
+<li> 
+Backend team was not able to get the APIs, therefore, Anna and I couldn’t link the frontend to the backend. 
+</li><br>
 </ul>
 
 
-<h3>XP Value</h3><br>
- <ul>
- <li>Feedback: shared / received feed back from the front end team about the data which is sent in JSON. </li><br>
-  <li>Feedback: Used Postman for efficiency. </li><br>
+<h2>Sprint #5 (10/28 - 11/02)</h2><br>
+
+<h3>What tasks did I work on/complete?</h3><br>
+<ul>
+<li> 
+Developed some of the logic for rendering listings on the home page, using fake data. Also created a navbar using react bootstrap. 
+</li><br>
+</ul>
+
+<h3>What am I planning to work on next?</h3><br>
+<ul>
+<li> 
+Start developing logic for logged in and logged out views for various components. Also create a search bar with filtering functionality.
+</li><br>
 </ul>
 
 
-
-<h2>Team 14, Sprint #5 (10/28 - 11/02)</h2><br>
-
- <h3>Name</h3><br>
- <ul>
- <li>Arselan Alvi </li><br>
-</ul>
- 
- <h3>What did I do since last scrum</h3><br>
- <ul>
- <li>Send Register/ login data using CURL apis to front end.</li><br>
-  <li>admin login/ admin home.</li><br>
- <li>Testing with frontend team</li><br>
-</ul>
-
-<h3>What I plan to do today</h3><br>
- <ul>
- <li>Admin approve / reject user</li><br>
-  <li>Update databases</li><br>
-   <li>Look into buyer and renter</li><br>
-   <li>Debug CURL issues with front end team</li><br>
-</ul>
-
-
-<h3>Blockers I have</h3><br>
- <ul>
- <li>front end template for admin / home</li><br>
- <li>Testing failed, debug server issues</li><br>
-</ul>
-
-<h3>XP Value</h3><br>
- <ul>
- <li>Courage: Front end is not able to co-ordinate with Java APIs. Look for alternate solution. About Half project is already progressed </li><br>
- <li>Respect: respect decisions, change my code to python. </li><br>
+<h3>What tasks are blocked waiting on another team member?</h3><br>
+<ul>
+<li> 
+APIs were returning either HTML or text, not JSON, which was the agreed upon format for the API. Therefore, Anna and I were not able to link the frontend to the backend. 
+</li><br>
 </ul>
 
 
